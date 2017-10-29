@@ -67,12 +67,11 @@ def hello():
 
 
 
-    url = "http://52.91.199.207:82/addRecord"
+    url = "https://https://lms.winuall.com/medinovate"
     response = requests.request("POST", url, data=payload)
+    param = id+'_'+record_type+'_'+datacenter
 
-
-    print (response)
-    return "Details added!"
+    return render_template('medinnovate/add-department.html', param=param)
 
 
 
