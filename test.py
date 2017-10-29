@@ -3,7 +3,7 @@ from flask import request
 from PIL import Image
 import imagehash
 import os
-
+from flask import render_template
 
 app = Flask(__name__)
 UPLOAD_FOLDER = '/home/sk/Documents/innovacer'
@@ -29,7 +29,8 @@ def upload_file():
 
 @app.route('/')
 def index():
-    return 'Index Page'
+    return render_template('display.html')
+
 
 @app.route('/hello', methods = ['GET','POST'])
 def hello():
